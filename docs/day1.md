@@ -99,3 +99,17 @@ It helps in collaboration and managing code efficiently.
 - Proper project structure is important
 - README and documentation are essential
 - Correct directory setup is very important
+
+## Why Engineering Setup is Important
+
+- Helps maintain clean and organized code
+- Makes collaboration easier in teams
+- Improves scalability of projects
+- Follows industry standards
+
+## Tools Used
+
+- VS Code (Code Editor)
+- Git (Version Control)
+- GitHub (Code Hosting)
+- Git Bash (Terminal)
