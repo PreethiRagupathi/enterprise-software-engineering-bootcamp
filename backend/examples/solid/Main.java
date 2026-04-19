@@ -1,12 +1,10 @@
 public class Main {
     public static void main(String[] args) {
 
-        PaymentService payment = new PaymentService();
-        EmailService email = new EmailService();
-        OrderRepository repo = new OrderRepository();
+        Order order = new Order("Laptop", 50000);
 
-        OrderService order = new OrderService(payment, email, repo);
+        OrderController controller = new OrderController();
 
-        order.placeOrder();
+        controller.createOrder(order);
     }
 }

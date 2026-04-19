@@ -1,23 +1,21 @@
 class OrderService {
 
-    PaymentService paymentService;
-    EmailService emailService;
-    OrderRepository orderRepository;
+    OrderRepository repo = new OrderRepository();
 
-    OrderService(PaymentService paymentService, EmailService emailService, OrderRepository orderRepository) {
-        this.paymentService = paymentService;
-        this.emailService = emailService;
-        this.orderRepository = orderRepository;
-    }
+    public void placeOrder(Order order) {
 
-    void placeOrder() {
-        createOrder();
-        paymentService.processPayment();
-        emailService.sendEmail();
-        orderRepository.saveToDatabase();
-    }
+        // validation logic
+        if (order.price <= 0) {
+            System.out.println("Invalid price");
+            return;
+        }
 
-    void createOrder() {
-        System.out.println("Order created");
+        // business logic
+        System.out.println("Processing order: " + order.name);
+
+        // save to repository
+        repo.save(order);
+
+        System.out.println("Order placed successfully");
     }
 }

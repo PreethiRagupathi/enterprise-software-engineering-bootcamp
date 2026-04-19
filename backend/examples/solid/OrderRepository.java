@@ -1,5 +1,11 @@
+import java.util.*;
+
 class OrderRepository {
-    void saveToDatabase() {
-        System.out.println("Saved to database");
+
+    List<Order> orders = new ArrayList<>();
+
+    public void save(Order order) {
+        orders.add(order);
+        System.out.println("Order saved to database");
     }
 }
