@@ -1,7 +1,12 @@
 package com.myapp.auth;
 
 public class AuthService {
-    public void login() {
-        System.out.println("User login");
+
+    public String login(String username, String password) {
+        if(username.equals("admin") && password.equals("123")) {
+            return "Login Success";
+        }
+        return "Invalid Credentials";
     }
+
 }
